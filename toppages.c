@@ -125,8 +125,9 @@ int main(int argc,char **argv){
 
 	while ( (err = scanf("%19s %1023s %lu %lu",project,page,&count,&sz)) == 4 ){
 		rows++;
-                // ignore non-english projects
-                if (strncmp(project,"en",2)!=0){
+                // ignore non-english projects to avoid duplicate entries
+                // (see Bugs in README.md)
+                if (strcmp(project,"en")!=0){
  			ignored ++;
 			continue;
                 }
