@@ -2,7 +2,7 @@ Show Wikipedia Top Pages
 ========================
 
 This is simple C program to show most accessed pages on Wikipedia from large
-dataset.
+dataset. No rocket science here, just prototype.
 
 Setup
 -----
@@ -17,4 +17,8 @@ Run program in pipe, for example:
 
 	zcat pagecounts-20140820-160000.gz | toppages
 
+Bugs
+----
+
+* Does not detect/handle duplicate page names (so you can not just cat multiple pagecounts files together as input to this program)
 
